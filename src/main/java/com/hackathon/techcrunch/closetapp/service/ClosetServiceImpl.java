@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 @Service
-public class ClosetAppImpl implements ClosetApp{
+public class ClosetServiceImpl implements ClosetService{
 
     @Autowired
     public ClosetRepository closetRepository;

@@ -1,4 +1,4 @@
-package com.mcf7.couchbase.config;
+package com.hackathon.techcrunch.closetapp.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

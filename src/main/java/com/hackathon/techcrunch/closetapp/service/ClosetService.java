@@ -9,7 +9,7 @@ import java.util.List;
  * Created by ANAIK on 5/13/17.
  */
 
-public interface ClosetApp {
+public interface ClosetService {
     public void addCloset(Closet closet);
     public List<Closet> getClosets();
 }
