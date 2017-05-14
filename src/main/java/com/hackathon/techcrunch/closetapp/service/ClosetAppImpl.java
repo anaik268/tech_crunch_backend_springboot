@@ -15,12 +15,8 @@ import java.util.List;
 @Service
 public class ClosetAppImpl implements ClosetApp{
 
-    public final ClosetRepository closetRepository;
-
     @Autowired
-    public ClosetAppImpl(ClosetRepository closetRepository) {
-        this.closetRepository = closetRepository;
-    }
+    public ClosetRepository closetRepository;
 
     @Override
     public void addCloset(Closet closet) {

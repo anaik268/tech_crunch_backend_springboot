@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,16 +19,20 @@ import java.util.List;
 @RequestMapping("/closet")
 public class ClosetController {
 
-    private ClosetAppImpl closetAppImpl;
+    @Autowired
+    private ClosetApp closetApp;
 
     @Autowired
-    public ClosetController(ClosetAppImpl closetAppImpl) {
-        this.closetAppImpl = closetAppImpl;
-    }
+    private ClosetRepository closetRepository;
+
+//    @Autowired
+//    public ClosetController(ClosetApp closetApp) {
+//        this.closetApp = closetApp;
+//    }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Closet> getClosets() {
-        List<Closet> closets = closetAppImpl.getClosets();
+        List<Closet> closets = closetApp.getClosets();
         return closets;
     }
 
